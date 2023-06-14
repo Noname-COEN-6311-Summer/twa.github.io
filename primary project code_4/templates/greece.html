@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="report text-center">
+            <h1>Greece Package</h1>
+            <p>Hotel: {{ report.Hotel }}</p>
+            <p>Flights: {{ report.Flights }}</p>
+            <p>Activities: {{ report.Activities }}</p>
+            <p>Departure Time: {{ report.Departure_Time }}</p>
+            <p>Price: ${{ report.Price }}</p>
+            </div>
+        </div>
+        <form method="post" action="/book">
+            <input type="hidden" name="destination" value="greece">
+            <button type="submit" class="btn btn-primary">Book Now</button>
+        </form>
+    </div>
+    </div>
+
+{% endblock %}
